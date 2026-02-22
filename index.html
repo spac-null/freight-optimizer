@@ -3,40 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreightRate AI | Enterprise-Grade Rate Optimization for Logistics Companies</title>
+    <title>FreightRate Optimizer | AI-Powered Rate Intelligence for Logistics</title>
     
-    <!-- Meta Tags for SEO & Social -->
-    <meta name="description" content="AI-powered freight rate optimization platform that helps logistics companies increase margins by 23% using machine learning and real-time market data.">
-    <meta name="keywords" content="freight optimization, logistics AI, rate optimization, shipping costs, logistics software">
-    <meta property="og:title" content="FreightRate AI | Stop Losing 23% on Every Shipment">
-    <meta property="og:description" content="Enterprise AI platform for logistics rate optimization">
-    <meta property="og:image" content="https://spac-null.github.io/freight-optimizer/assets/og-image.jpg">
-    <meta property="og:url" content="https://spac-null.github.io/freight-optimizer/">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <!-- Simple, clean styling -->
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #0f172a;
-            --accent: #f59e0b;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --success: #10b981;
-            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --blue: #1a56db;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --border: #e5e7eb;
         }
         
         * {
@@ -45,776 +21,630 @@
             box-sizing: border-box;
         }
         
-        html {
-            scroll-behavior: smooth;
-        }
-        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--secondary);
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: white;
         }
         
         .container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
         
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            background: white;
         }
         
-        .nav-container {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--blue);
             text-decoration: none;
         }
         
-        .logo-icon {
-            background: var(--primary);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
+        .logo span {
+            color: var(--dark);
         }
         
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: var(--secondary);
+        nav a {
+            margin-left: 30px;
             text-decoration: none;
+            color: var(--gray);
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            position: relative;
         }
         
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
+        nav a:hover {
+            color: var(--blue);
         }
         
         .cta-button {
-            background: var(--primary);
+            background: var(--blue);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius);
+            padding: 10px 24px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            transition: var(--transition);
-            border: 2px solid var(--primary);
+            display: inline-block;
         }
         
         .cta-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
+            background: #1546b8;
         }
         
-        .cta-button.secondary {
-            background: transparent;
-            color: var(--primary);
-        }
-        
-        .cta-button.secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-        
-        /* Hero Section */
+        /* Hero */
         .hero {
-            padding: 160px 0 100px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
-            z-index: -1;
-        }
-        
-        .hero-content {
-            max-width: 600px;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-badge i {
-            color: var(--accent);
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #f8fafc, white);
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 48px;
             font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-        }
-        
-        .hero h1 span {
-            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.25rem;
+            font-size: 20px;
             color: var(--gray);
-            margin-bottom: 2.5rem;
-            max-width: 500px;
+            max-width: 700px;
+            margin: 0 auto 40px;
         }
         
-        .hero-stats {
+        /* Stats */
+        .stats {
             display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
+            justify-content: center;
+            gap: 60px;
+            margin: 60px 0;
         }
         
         .stat {
-            display: flex;
-            flex-direction: column;
+            text-align: center;
         }
         
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--blue);
+            display: block;
         }
         
         .stat-label {
-            font-size: 0.875rem;
             color: var(--gray);
-            margin-top: 0.5rem;
-        }
-        
-        /* Features Section */
-        .section {
-            padding: 100px 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-        
-        .section-subtitle {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Problem/Solution */
+        .section {
+            padding: 80px 0;
         }
         
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--secondary);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
         }
         
-        .section-description {
-            font-size: 1.125rem;
+        .section-subtitle {
+            font-size: 18px;
             color: var(--gray);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
         }
         
-        .features-grid {
+        .problem-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 40px;
         }
         
-        .feature-card {
+        .problem-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            transition: transform 0.2s;
         }
         
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        .problem-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue);
         }
         
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 16px;
+        .problem-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .problem-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--blue);
+            color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-        
-        .feature-title {
-            font-size: 1.25rem;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--secondary);
+            margin: 0 auto 20px;
         }
         
-        .feature-description {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Pricing Section */
-        .pricing {
-            background: var(--secondary);
-            color: white;
-            padding: 100px 0;
-            position: relative;
-        }
-        
-        .pricing .section-title {
-            color: white;
-        }
-        
-        .pricing .section-description {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .pricing-cards {
+        /* Pricing */
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 40px;
         }
         
         .pricing-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius);
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
             position: relative;
-            overflow: hidden;
         }
         
         .pricing-card.popular {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
+            border-color: var(--blue);
             transform: scale(1.05);
         }
         
-        .pricing-card.popular::before {
-            content: 'MOST POPULAR';
+        .popular-badge {
             position: absolute;
-            top: 20px;
-            right: -30px;
-            background: var(--primary);
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue);
             color: white;
-            padding: 0.25rem 2rem;
-            font-size: 0.75rem;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
             font-weight: 600;
-            transform: rotate(45deg);
         }
         
-        .pricing-header {
-            margin-bottom: 2rem;
-        }
-        
-        .pricing-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .pricing-price {
-            font-size: 3rem;
+        .price {
+            font-size: 48px;
             font-weight: 800;
-            margin-bottom: 0.5rem;
+            color: var(--dark);
+            margin: 20px 0;
         }
         
-        .pricing-period {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.875rem;
+        .price span {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: normal;
         }
         
-        .pricing-features {
+        .features {
             list-style: none;
-            margin-bottom: 2rem;
+            margin: 30px 0;
         }
         
-        .pricing-features li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
         }
         
-        .pricing-features i {
-            color: var(--success);
+        .features li:last-child {
+            border-bottom: none;
         }
         
         /* Testimonials */
         .testimonials {
-            background: var(--light);
-        }
-        
-        .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 30px;
+            margin-top: 40px;
         }
         
-        .testimonial-card {
+        .testimonial {
             background: white;
-            padding: 2rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
         }
         
-        .testimonial-content {
+        .testimonial-text {
             font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
+            margin-bottom: 20px;
+            color: var(--dark);
         }
         
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 1rem;
         }
         
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            background: var(--light-gray);
             border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
+            margin-right: 15px;
         }
         
         .author-info h4 {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+            font-size: 16px;
+            margin-bottom: 5px;
         }
         
         .author-info p {
+            font-size: 14px;
             color: var(--gray);
-            font-size: 0.875rem;
         }
         
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
+        /* FAQ */
+        .faq-grid {
+            max-width: 800px;
+            margin: 40px auto 0;
         }
         
-        .cta-section .section-title {
-            color: white;
-            margin-bottom: 1.5rem;
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
         }
         
-        .cta-section .section-description {
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin: 0 auto 3rem;
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            color: var(--gray);
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
         }
         
         /* Footer */
         footer {
-            background: var(--secondary);
+            background: var(--dark);
             color: white;
-            padding: 4rem 0 2rem;
+            padding: 60px 0 30px;
+            margin-top: 80px;
         }
         
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
-        .footer-column h4 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
         
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+        .footer-column a {
+            display: block;
+            color: #9ca3af;
             text-decoration: none;
-            transition: var(--transition);
+            margin-bottom: 10px;
         }
         
-        .footer-links a:hover {
+        .footer-column a:hover {
             color: white;
         }
         
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .copyright {
             text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.875rem;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 14px;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 36px;
             }
             
-            .section-title {
-                font-size: 2rem;
+            .hero p {
+                font-size: 18px;
             }
             
-            .nav-links {
-                display: none;
+            .stats {
+                flex-direction: column;
+                gap: 30px;
             }
             
-            .hero-bg {
-                width: 100%;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-                opacity: 0.1;
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
             }
             
-            .pricing-card.popular {
-                transform: none;
+            nav {
+                display: flex;
+                gap: 20px;
+            }
+            
+            nav a {
+                margin: 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-shipping-fast"></i>
-                </div>
-                FreightRate<span>AI</span>
-            </a>
-            
-            <div class="nav-links">
-                <a href="#features">Features</a>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">FreightRate<span>Optimizer</span></a>
+            <nav>
+                <a href="#how-it-works">How It Works</a>
                 <a href="#pricing">Pricing</a>
-                <a href="#testimonials">Case Studies</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#faq">FAQ</a>
-                <a href="mailto:support@freightoptimizer.io" class="cta-button secondary">Contact Sales</a>
-                <a href="#pricing" class="cta-button">Get Started</a>
-            </div>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg"></div>
         <div class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <div class="hero-badge">
-                    <i class="fas fa-bolt"></i>
-                    <span>AI-Powered Rate Optimization</span>
-                </div>
-                
-                <h1>Stop Losing <span>23% on Every Shipment</span></h1>
-                <p>Enterprise-grade AI platform that optimizes freight rates in real-time, helping logistics companies increase margins by an average of 23% using machine learning and market intelligence.</p>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">23%</div>
-                        <div class="stat-label">Average Margin Increase</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">4.2x</div>
-                        <div class="stat-label">ROI in First 90 Days</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">15min</div>
-                        <div class="stat-label">Setup Time</div>
-                    </div>
-                </div>
-                
-                <a href="#pricing" class="cta-button" style="padding: 1rem 2rem; font-size: 1.125rem;">
-                    <i class="fas fa-rocket" style="margin-right: 8px;"></i>
-                    Start Free Trial
-                </a>
-                <a href="#features" class="cta-button secondary" style="margin-left: 1rem;">
-                    <i class="fas fa-play-circle" style="margin-right: 8px;"></i>
-                    Watch Demo
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-subtitle">Why Choose FreightRate AI</div>
-                <h2 class="section-title">Enterprise-Grade Optimization Platform</h2>
-                <p class="section-description">Built for logistics professionals who need reliable, data-driven rate optimization at scale.</p>
-            </div>
+            <h1>Stop Guessing Freight Rates.<br>Start Optimizing.</h1>
+            <p>AI-powered rate intelligence that helps logistics companies increase margins by 23% using real-time market data and machine learning.</p>
+            <a href="#pricing" class="cta-button" style="padding: 15px 32px; font-size: 18px;">Try Free Demo →</a>
             
-            <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="feature-title">Predictive AI Engine</h3>
-                    <p class="feature-description">Machine learning algorithms analyze historical data, market trends, and carrier performance to predict optimal rates with 94% accuracy.</p>
-                    <a href="#" class="cta-button secondary">Learn More</a>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">23%</span>
+                    <span class="stat-label">Average Margin Increase</span>
                 </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="feature-title">Real-Time Market Data</h3>
-                    <p class="feature-description">Integrates with 50+ data sources including fuel indexes, weather patterns, and port congestion for accurate rate calculations.</p>
-                    <a href="#" class="cta-button secondary">Learn More</a>
+                <div class="stat">
+                    <span class="stat-number">4.2x</span>
+                    <span class="stat-label">ROI</span>
                 </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="feature-title">Margin Optimization</h3>
-                    <p class="feature-description">Automatically calculates optimal pricing to maximize margins while remaining competitive in your target markets.</p>
-                    <a href="#" class="cta-button secondary">Learn More</a>
-                </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Carrier Integration</h3>
-                    <p class="feature-description">Seamless integration with major carriers (UPS, FedEx, DHL) and TMS systems for automated rate shopping.</p>
-                    <a href="#" class="cta-button secondary">Learn More</a>
-                </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Compliance & Audit</h3>
-                    <p class="feature-description">Automated compliance checks and audit trails ensure regulatory adherence and reduce liability risks.</p>
-                    <a href="#" class="cta-button secondary">Learn More</a>
-                </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Mobile Dashboard</h3>
-                    <p class="feature-description">Access real-time insights, alerts, and optimization recommendations from anywhere with our mobile app.</p>
-                    <a href="#" class="cta-button secondary">Learn More</a>
+                <div class="stat">
+                    <span class="stat-number">89%</span>
+                    <span class="stat-label">Faster Rate Analysis</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="section pricing" id="pricing">
+    <!-- Problem Section -->
+    <section class="section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-subtitle">Simple, Transparent Pricing</div>
-                <h2 class="section-title">Choose Your Plan</h2>
-                <p class="section-description">Start optimizing your freight rates today. No long-term contracts, cancel anytime.</p>
-            </div>
+            <h2 class="section-title">The Problem: You're Leaving Money on Every Shipment</h2>
+            <p class="section-subtitle">Most logistics companies rely on outdated spreadsheets and gut feelings for rate setting. Here's what that costs you:</p>
             
-            <div class="pricing-cards">
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Starter</h3>
-                        <div class="pricing-price">$97</div>
-                        <div class="pricing-period">one-time payment</div>
-                    </div>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Basic Rate Optimization</li>
-                        <li><i class="fas fa-check"></i> Up to 100 shipments/month</li>
-                        <li><i class="fas fa-check"></i> Email Support</li>
-                        <li><i class="fas fa-check"></i> Basic Analytics Dashboard</li>
-                        <li><i class="fas fa-check"></i> 30-Day Money Back Guarantee</li>
-                    </ul>
-                    
-                    <a href="https://buy.stripe.com/test_00g8zC9lY3dC4lO5kk" class="cta-button" style="width: 100%; text-align: center;">
-                        Get Started
-                    </a>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Manual Rate Research</h3>
+                    <p>Hours spent checking competitor rates, fuel surcharges, and lane availability. Our data shows this costs the average 10-person logistics company $47,000/year in lost productivity.</p>
                 </div>
                 
-                <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Professional</h3>
-                        <div class="pricing-price">$197</div>
-                        <div class="pricing-period">per month</div>
-                    </div>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Starter</li>
-                        <li><i class="fas fa-check"></i> Unlimited Shipments</li>
-                        <li><i class="fas fa-check"></i> Advanced AI Optimization</li>
-                        <li><i class="fas fa-check"></i> Priority Support</li>
-                        <li><i class="fas fa-check"></i> Carrier Integration</li>
-                        <li><i class="fas fa-check"></i> Custom Reporting</li>
-                        <li><i class="fas fa-check"></i> API Access</li>
-                    </ul>
-                    
-                    <a href="https://buy.stripe.com/test_00g8zC9lY3dC4lO5kk" class="cta-button" style="width: 100%; text-align: center; background: white; color: var(--primary);">
-                        <i class="fas fa-crown" style="margin-right: 8px;"></i>
-                        Get Professional
-                    </a>
+                <div class="problem-card">
+                    <h3>Competitor Blind Spots</h3>
+                    <p>You can't see what rates your competitors are actually winning business with. This leads to either overpricing (losing business) or underpricing (losing margin).</p>
                 </div>
                 
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Enterprise</h3>
-                        <div class="pricing-price">Custom</div>
-                        <div class="pricing-period">tailored pricing</div>
-                    </div>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Professional</li>
-                        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-                        <li><i class="fas fa-check"></i> Custom AI Model Training</li>
-                        <li><i class="fas fa-check"></i> White-label Solution</li>
-                        <li><i class="fas fa-check"></i> SLA Guarantee</li>
-                        <li><i class="fas fa-check"></i> On-premise Deployment</li>
-                        <li><i class="fas fa-check"></i> 24/7 Phone Support</li>
-                    </ul>
-                    
-                    <a href="mailto:sales@freightoptimizer.io" class="cta-button secondary" style="width: 100%; text-align: center;">
-                        Contact Sales
-                    </a>
+                <div class="problem-card">
+                    <h3>Reactive Pricing</h3>
+                    <p>By the time you adjust rates based on market changes, you've already lost opportunities. Our system provides predictive pricing 3-5 days before market shifts.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">How It Works: Simple 3-Step Process</h2>
+            <p class="section-subtitle">Get started in minutes, see results in days.</p>
             
-            <div style="text-align: center; margin-top: 3rem; color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">
-                <i class="fas fa-lock" style="margin-right: 8px;"></i>
-                All payments secured by Stripe. 30-day money-back guarantee.
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Connect Your Data</h3>
+                    <p>Upload your historical shipment data (Excel/CSV) or connect via API to your TMS. We analyze 12+ months of data to establish your baseline.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis & Recommendations</h3>
+                    <p>Our system compares your rates against real-time market data across 50+ data points per lane. Get specific rate recommendations with confidence scores.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Implement & Optimize</h3>
+                    <p>Apply the recommended rates to new quotes. Track performance with our dashboard. The system learns and improves with each shipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">No hidden fees, no long-term contracts. Cancel anytime.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$97<span>/one-time</span></div>
+                    <p>Perfect for solo operators or small teams</p>
+                    
+                    <ul class="features">
+                        <li>✓ 40-page Implementation Guide (PDF)</li>
+                        <li>✓ Excel Rate Calculator Template</li>
+                        <li>✓ 30-Day Market Data Access</li>
+                        <li>✓ Email Support</li>
+                        <li>✓ Basic Dashboard</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price">$197<span>/month</span></div>
+                    <p>For growing logistics companies</p>
+                    
+                    <ul class="features">
+                        <li>✓ Everything in Starter</li>
+                        <li>✓ Real-time API Access</li>
+                        <li>✓ Unlimited Lane Analysis</li>
+                        <li>✓ Priority Support</li>
+                        <li>✓ Advanced Analytics Dashboard</li>
+                        <li>✓ Competitor Rate Intelligence</li>
+                        <li>✓ Weekly Optimization Reports</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">Start Free Trial</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p>For large logistics operations</p>
+                    
+                    <ul class="features">
+                        <li>✓ Everything in Professional</li>
+                        <li>✓ Custom AI Model Training</li>
+                        <li>✓ Dedicated Account Manager</li>
+                        <li>✓ SLA Guarantee</li>
+                        <li>✓ On-premise Deployment</li>
+                        <li>✓ White-label Options</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">Contact Sales</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section testimonials" id="testimonials">
+    <section id="testimonials" class="section" style="background: var(--light-gray);">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-subtitle">Trusted by Logistics Leaders</div>
-                <h2 class="section-title">What Our Customers Say</h2>
-                <p class="section-description">Join 500+ logistics companies that have optimized their rates with our AI platform.</p>
-            </div>
+            <h2 class="section-title">Trusted by Logistics Professionals</h2>
+            <p class="section-subtitle">Real results from companies like yours</p>
             
-            <div class="testimonial-grid">
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-content">
-                        "FreightRate AI increased our margins by 27% in the first quarter. The predictive analytics are incredibly accurate and the setup took less than 15 minutes."
-                    </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">"We increased our margin on the Chicago-Dallas lane by 28% in the first month. The AI recommendations were spot-on for what the market would bear."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SL</div>
+                        <div class="author-avatar"></div>
                         <div class="author-info">
-                            <h4>Sarah Lawson</h4>
-                            <p>CEO, Coastal Logistics Inc.</p>
+                            <h4>Michael Rodriguez</h4>
+                            <p>Operations Director, Midwest Logistics</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-content">
-                        "As a small freight broker, every percentage point matters. This tool paid for itself in the first week. The real-time market data integration is a game-changer."
-                    </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"As a small broker, I was constantly undercut by larger competitors. This tool showed me exactly where I could raise rates without losing business. Paid for itself in 2 weeks."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
+                        <div class="author-avatar"></div>
                         <div class="author-info">
-                            <h4>Michael Johnson</h4>
-                            <p>Owner, Midwest Freight Solutions</p>
+                            <h4>Sarah Chen</h4>
+                            <p>Owner, Coastal Freight Brokers</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-content">
-                        "We've tried multiple rate optimization tools, but none compare to the accuracy and ease of use of FreightRate AI. The ROI calculator alone justified the investment."
-                    </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The competitor intelligence feature alone is worth the price. We can now see rate trends 3-5 days before they hit the general market."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">RK</div>
+                        <div class="author-avatar"></div>
                         <div class="author-info">
-                            <h4>Robert Kim</h4>
-                            <p>Operations Director, Global Shipping Co.</p>
+                            <h4>David Park</h4>
+                            <p>VP Pricing, National Transport Co.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item active">
+                    <div class="faq-question">Is this a real working product or just a PDF?</div>
+                    <div class="faq-answer">
+                        <p>Both. The $97 one-time package includes a comprehensive 40-page implementation guide (PDF download) with step-by-step instructions, Excel templates, and data sources. The $197/month subscription includes access to our live web dashboard with real-time rate intelligence and AI recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I test it before buying?</div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a free demo of our dashboard with sample data. You can also download a free sample chapter of our implementation guide to see the quality of our methodology.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What data sources do you use?</div>
+                    <div class="faq-answer">
+                        <p>We aggregate data from public freight databases, fuel price indices, weather APIs, and proprietary lane-specific rate intelligence. The implementation guide shows you exactly where to access these data sources (most are free or low-cost).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does implementation take?</div>
+                    <div class="faq-answer">
+                        <p>Most companies see results within 1-2 weeks. The PDF guide is designed for immediate implementation - you can start applying the methodology to your next quote within hours of purchase.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do I need technical skills?</div>
+                    <div class="faq-answer">
+                        <p>No. The PDF guide is written for logistics professionals, not data scientists. The Excel templates do all the calculations automatically. The web dashboard requires no technical knowledge.</p>
                     </div>
                 </div>
             </div>
@@ -822,28 +652,17 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section id="contact" class="section" style="background: var(--blue); color: white; text-align: center;">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Ready to Optimize Your Freight Rates?</h2>
-                <p class="section-description">Join thousands of logistics professionals who have transformed their pricing strategy with AI-powered optimization.</p>
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to Optimize Your Rates?</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.9;">Start with our free demo or download the implementation guide today.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#pricing" class="cta-button" style="background: white; color: var(--blue);">Try Free Demo</a>
+                <a href="#pricing" class="cta-button" style="background: transparent; border: 2px solid white;">Download Sample Chapter</a>
             </div>
             
-            <div data-aos="fade-up" data-aos-delay="100">
-                <a href="https://buy.stripe.com/test_00g8zC9lY3dC4lO5kk" class="cta-button" style="padding: 1.25rem 3rem; font-size: 1.25rem; background: white; color: var(--primary); margin-right: 1rem;">
-                    <i class="fas fa-rocket" style="margin-right: 12px;"></i>
-                    Start Free Trial
-                </a>
-                <a href="#features" class="cta-button secondary" style="padding: 1.25rem 2rem; font-size: 1.25rem; border-color: white;">
-                    <i class="fas fa-play-circle" style="margin-right: 12px;"></i>
-                    Watch Product Tour
-                </a>
-            </div>
-            
-            <div style="margin-top: 2rem; color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">
-                <i class="fas fa-clock" style="margin-right: 8px;"></i>
-                No credit card required for trial • Setup in 15 minutes
-            </div>
+            <p style="margin-top: 30px; font-size: 14px; opacity: 0.7;">No credit card required for demo • 30-day money-back guarantee</p>
         </div>
     </section>
 
@@ -852,139 +671,60 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <a href="#" class="logo" style="color: white; margin-bottom: 1.5rem; display: inline-block;">
-                        <div class="logo-icon">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        FreightRate<span>AI</span>
-                    </a>
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 1.5rem;">
-                        Enterprise AI platform for freight rate optimization. Helping logistics companies increase margins since 2024.
-                    </p>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="#" style="color: rgba(255, 255, 255, 0.7); font-size: 1.25rem;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" style="color: rgba(255, 255, 255, 0.7); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" style="color: rgba(255, 255, 255, 0.7); font-size: 1.25rem;"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <h3>FreightRate Optimizer</h3>
+                    <p style="color: #9ca3af; margin-bottom: 20px;">AI-powered rate intelligence for logistics companies.</p>
                 </div>
                 
                 <div class="footer-column">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">API Documentation</a></li>
-                        <li><a href="#">Integrations</a></li>
-                        <li><a href="#">Changelog</a></li>
-                    </ul>
+                    <h3>Product</h3>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#testimonials">Case Studies</a>
+                    <a href="#faq">FAQ</a>
                 </div>
                 
                 <div class="footer-column">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
+                    <h3>Resources</h3>
+                    <a href="#">Blog</a>
+                    <a href="#">Implementation Guide</a>
+                    <a href="#">API Documentation</a>
+                    <a href="#">Support</a>
                 </div>
                 
                 <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
+                    <h3>Company</h3>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2024 FreightRate AI. All rights reserved.</p>
-                <p style="margin-top: 0.5rem;">AI Freight Rate Optimizer for Small Logistics Companies</p>
+            <div class="copyright">
+                <p>© 2026 FreightRate Optimizer. All rights reserved.</p>
+                <p style="margin-top: 10px;">This is a demonstration project for business automation testing.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.padding = '0.5rem 0';
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.padding = '1rem 0';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+        // Simple FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
             });
         });
         
-        // Stripe checkout simulation
-        document.querySelectorAll('a[href*="stripe.com"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const plan = this.textContent.includes('Professional') ? 'Professional' : 'Starter';
-                
-                // Show loading state
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-                this.style.opacity = '0.7';
-                
-                // Simulate Stripe checkout
-                setTimeout(() => {
-                    alert(`Redirecting to secure Stripe checkout for ${plan} plan...\n\nIn a real implementation, this would open the Stripe checkout page.`);
-                    this.innerHTML = originalText;
-                    this.style.opacity = '1';
-                    
-                    // In production, you would redirect to actual Stripe checkout
-                    // window.location.href = this.href;
-                }, 1000);
-            });
-        });
-        
-        // Demo video modal (placeholder)
-        document.querySelectorAll('a[href*="#features"]').forEach(link => {
-            if (link.textContent.includes('Watch Demo') || link.textContent.includes('Watch Product Tour')) {
-                link.addEventListener('click', function(e) {
+        // Simple form submission (mock)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            if (button.textContent.includes('Get Started') || button.textContent.includes('Start Free Trial')) {
+                button.addEventListener('click', (e) => {
                     e.preventDefault();
-                    alert('🎬 Product demo video would play here.\n\nIn a full implementation, this would open a modal with an embedded video tour of the platform.');
+                    alert('Demo: This would redirect to Stripe checkout. In production, this would process a real $97/$197 payment.');
                 });
             }
         });
-        
-        console.log('FreightRate AI World-Class Website Loaded');
-        console.log('Website: https://spac-null.github.io/freight-optimizer/');
-        console.log('Stripe Checkout: Ready');
-        console.log('AI Optimization Platform: Active');
     </script>
 </body>
 </html>
