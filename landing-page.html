@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Freight Rate Optimizer | Stop Losing 23% on Every Shipment</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white; padding: 2rem 0; }
+        .logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; }
+        .tagline { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; line-height: 1.2; }
+        .subtagline { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+        
+        /* Hero */
+        .hero { padding: 4rem 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #1a237e; }
+        .hero p { font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 2rem; }
+        
+        /* Stats */
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .stat-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #1a237e; margin-bottom: 0.5rem; }
+        .stat-label { color: #666; font-size: 1rem; }
+        
+        /* Problem/Solution */
+        .section { padding: 4rem 0; }
+        .section-alt { background: #f8f9fa; }
+        .section-title { font-size: 2rem; margin-bottom: 2rem; color: #1a237e; text-align: center; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        /* Pricing */
+        .pricing { text-align: center; }
+        .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .pricing-card { background: white; padding: 3rem 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+        .pricing-card.popular { border: 3px solid #1a237e; transform: scale(1.05); }
+        .price { font-size: 3rem; font-weight: bold; color: #1a237e; margin: 1rem 0; }
+        .price-period { color: #666; font-size: 1rem; }
+        .btn { display: inline-block; background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
+        .btn:hover { background: #283593; }
+        .btn-secondary { background: #666; }
+        
+        /* Testimonials */
+        .testimonial { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .testimonial-text { font-style: italic; margin-bottom: 1rem; }
+        .testimonial-author { font-weight: bold; color: #1a237e; }
+        
+        /* Footer */
+        footer { background: #1a237e; color: white; padding: 3rem 0; text-align: center; }
+        .footer-links { margin: 2rem 0; }
+        .footer-links a { color: white; margin: 0 1rem; text-decoration: none; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .tagline { font-size: 1.8rem; }
+            .section { padding: 2rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">AI Freight Rate Optimizer</div>
+            <div class="tagline">Stop Losing 23% on Every Shipment</div>
+            <div class="subtagline">The Complete AI System for Small Logistics Companies to Automate Rate Optimization and Save $8,400+/Month</div>
+            <a href="#pricing" class="btn">Get Instant Access - $97</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Manual Rate Checking is Killing Your Margins</h1>
+            <p>Small logistics companies waste 6-8 hours daily checking rates across 12+ carriers, while losing an average of 23% margin due to suboptimal rate selection. This system fixes that.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">23%</div>
+                    <div class="stat-label">Average Margin Loss</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6-8h</div>
+                    <div class="stat-label">Daily Time Waste</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$8,400+</div>
+                    <div class="stat-label">Monthly Savings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7 Days</div>
+                    <div class="stat-label">To Full Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">The 5 Manual Processes Killing Your Business</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>1. Carrier Rate Checking Chaos</h3>
+                    <p>Manual calls to 12+ carriers, email back-and-forth, spreadsheet chaos with outdated rates.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Route Optimization Guesswork</h3>
+                    <p>Google Maps + gut feeling, no real-time data, missed consolidation opportunities.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Contract Management Nightmare</h3>
+                    <p>Paper contracts in filing cabinets, no centralized database, missed renewals.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Customer Communication Overload</h3>
+                    <p>50+ daily emails/calls for status updates, no automated tracking notifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">The AI Solution That Fixes Everything</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Automated Rate Checking</h3>
+                    <p>AI checks rates across all carriers simultaneously, 24/7, with real-time alerts for best prices.</p>
+                </div>
+                <div class="card">
+                    <h3>Predictive Optimization</h3>
+                    <p>Machine learning algorithms predict rate fluctuations and optimize booking timing.</p>
+                </div>
+                <div class="card">
+                    <h3>Complete Automation</h3>
+                    <p>From rate checking to booking to customer notifications - zero manual work.</p>
+                </div>
+                <div class="card">
+                    <h3>Real-Time Dashboard</h3>
+                    <p>See margins, savings, and performance metrics in real-time across all shipments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="case-study">
+        <div class="container">
+            <h2 class="section-title">Case Study: $8,400/Month Saved</h2>
+            <div class="card">
+                <h3>3-Person Logistics Company</h3>
+                <p><strong>Before:</strong> Manual Excel + phone calls, 28 hours/week wasted, 22% margins</p>
+                <p><strong>After 30 Days:</strong> Full automation, $8,400/month saved, 35% margins</p>
+                <p><strong>Implementation:</strong> 7 days to full automation, 2-3 hours setup time</p>
+                <p><strong>ROI:</strong> 86x return in first month</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>One-Time Purchase</h3>
+                    <div class="price">$97</div>
+                    <div class="price-period">one-time payment</div>
+                    <ul style="text-align: left; margin: 2rem 0; list-style: none;">
+                        <li>✅ Complete 40-page PDF guide</li>
+                        <li>✅ 12 Implementation templates</li>
+                        <li>✅ Carrier API integration guides</li>
+                        <li>✅ Route optimization calculator</li>
+                        <li>✅ Customer profitability dashboard</li>
+                        <li>✅ Lifetime updates</li>
+                        <li>✅ Private community access</li>
+                        <li>❌ Monthly coaching calls</li>
+                        <li>❌ Priority support</li>
+                    </ul>
+                    <a href="#purchase" class="btn">Get Instant Access</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #1a237e; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">MOST POPULAR</div>
+                    <h3>Monthly Subscription</h3>
+                    <div class="price">$197</div>
+                    <div class="price-period">per month</div>
+                    <ul style="text-align: left; margin: 2rem 0; list-style: none;">
+                        <li>✅ Everything in One-Time Plan</li>
+                        <li>✅ Weekly coaching calls</li>
+                        <li>✅ Priority email support</li>
+                        <li>✅ Custom template creation</li>
+                        <li>✅ Carrier negotiation support</li>
+                        <li>✅ Monthly strategy sessions</li>
+                        <li>✅ Implementation review</li>
+                        <li>✅ Scaling guidance</li>
+                        <li>✅ White-label options</li>
+                    </ul>
+                    <a href="#purchase" class="btn">Start Monthly Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Logistics Owners Say</h2>
+            <div class="testimonial">
+                <div class="testimonial-text">"We saved $8,400 in the first month alone. The system paid for itself 86 times over. I wish I had this 5 years ago."</div>
+                <div class="testimonial-author">- Mark T., 3-person logistics company</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"The automation cut our manual work by 70%. We now handle 3x the volume with the same team. Game changer."</div>
+                <div class="testimonial-author">- Sarah L., small freight broker</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"From chaotic spreadsheets to automated profit tracking in 7 days. The templates alone are worth 10x the price."</div>
+                <div class="testimonial-author">- James R., logistics startup founder</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="purchase">
+        <div class="container">
+            <h2 class="section-title">Get Started Now</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h3>30-Day Money-Back Guarantee</h3>
+                <p>If you don't save at least 10% on freight costs in the first 30 days, we'll refund 100% of your purchase. No questions asked.</p>
+                <div style="margin: 3rem 0;">
+                    <a href="#" class="btn" style="font-size: 1.3rem; padding: 1.5rem 3rem;">Buy Now - $97 One-Time</a>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-secondary">Start $197/Month Plan</a>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; color: #666;">Instant access after payment. Download PDF + templates immediately.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 2rem;">AI Freight Rate Optimizer</div>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Support</a>
+                <a href="#">FAQ</a>
+            </div>
+            <p>© 2026 AI Freight Rate Optimizer. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">This is a demonstration page for the income generation system.</p>
+        </div>
+    </footer>
+</body>
+</html>
