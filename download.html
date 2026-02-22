@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download FreightRate Optimizer | Implementation Guide & Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a56db;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+        
+        .download-options {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .option-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .option-card.featured {
+            border-color: #1a56db;
+            border-width: 2px;
+            transform: scale(1.02);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #1a56db;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+        
+        .price {
+            font-size: 36px;
+            font-weight: 800;
+            color: #111827;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 16px;
+            color: #6b7280;
+            font-weight: normal;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #1a56db;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .button:hover {
+            background: #1546b8;
+        }
+        
+        .button.secondary {
+            background: white;
+            color: #1a56db;
+            border: 2px solid #1a56db;
+        }
+        
+        .button.secondary:hover {
+            background: #f0f7ff;
+        }
+        
+        .demo-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .demo-card {
+            padding: 25px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        
+        .demo-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+        
+        .demo-card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        .test-result {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .test-result h3 {
+            color: #0369a1;
+            margin-bottom: 15px;
+        }
+        
+        .test-result pre {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">FreightRate Optimizer</a>
+            <h1>Download & Test the System</h1>
+            <p class="subtitle">Choose your package or try the live demo. All purchases include 30-day money-back guarantee.</p>
+        </header>
+        
+        <div class="download-options">
+            <div class="option-card">
+                <div class="badge">PDF Guide Only</div>
+                <h2>Implementation Guide</h2>
+                <p>Complete 40-page system with Excel templates and data sources.</p>
+                <div class="price">$97<span>/one-time</span></div>
+                
+                <ul class="features">
+                    <li>40-page PDF Implementation Guide</li>
+                    <li>Excel Rate Calculator Template</li>
+                    <li>Data Source Directory (50+ sources)</li>
+                    <li>Competitor Analysis Framework</li>
+                    <li>30-Day Email Support</li>
+                    <li>Lifetime Updates</li>
+                </ul>
+                
+                <button class="button" onclick="processPurchase('pdf')">Download PDF Guide ($97)</button>
+                <p style="text-align: center; margin-top: 15px; color: #6b7280; font-size: 14px;">Instant digital delivery</p>
+            </div>
+            
+            <div class="option-card featured">
+                <div class="badge">Most Popular</div>
+                <h2>Full System Access</h2>
+                <p>PDF guide + live web dashboard with AI recommendations.</p>
+                <div class="price">$197<span>/month</span></div>
+                
+                <ul class="features">
+                    <li>Everything in PDF Guide</li>
+                    <li>Live Web Dashboard Access</li>
+                    <li>Real-time Rate Intelligence</li>
+                    <li>AI-Powered Recommendations</li>
+                    <li>Competitor Rate Tracking</li>
+                    <li>Priority Support</li>
+                    <li>14-Day Free Trial</li>
+                </ul>
+                
+                <button class="button" onclick="processPurchase('full')">Start Free Trial ($197/mo)</button>
+                <p style="text-align: center; margin-top: 15px; color: #6b7280; font-size: 14px;">Cancel anytime</p>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Test the Live System</h2>
+            <p>Try our rate optimization engine with sample data. No signup required.</p>
+            
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <h3>Quick Rate Check</h3>
+                    <p>Enter a shipping lane to see optimized rate recommendations.</p>
+                    <div style="margin-top: 20px;">
+                        <input type="text" id="laneInput" placeholder="e.g., Chicago to Dallas" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; margin-bottom: 15px;">
+                        <button class="button secondary" onclick="checkRate()">Check Rate</button>
+                    </div>
+                </div>
+                
+                <div class="demo-card">
+                    <h3>Sample Data Analysis</h3>
+                    <p>See how the system analyzes historical shipment data.</p>
+                    <button class="button secondary" onclick="analyzeSample()">Analyze Sample Data</button>
+                </div>
+            </div>
+            
+            <div id="testResult" class="test-result" style="display: none;">
+                <h3>Test Results</h3>
+                <div id="resultContent"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 FreightRate Optimizer. This is a demonstration project for business automation testing.</p>
+            <p style="margin-top: 10px;">All payments processed securely via Stripe. 30-day money-back guarantee.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Mock purchase processing
+        function processPurchase(type) {
+            if (type === 'pdf') {
+                alert('DEMO: This would redirect to Stripe checkout for $97 payment and deliver PDF download.\n\nIn production, this would:\n1. Process $97 payment via Stripe\n2. Generate/download 40-page PDF\n3. Send email with download link\n4. Add customer to email sequence');
+                
+                // Simulate PDF download
+                setTimeout(() => {
+                    alert('✅ PDF download started! Check your downloads folder for "FreightRate_Optimizer_Guide.pdf"');
+                }, 1000);
+            } else {
+                alert('DEMO: This would start 14-day free trial for $197/month subscription.\n\nIn production, this would:\n1. Create Stripe subscription\n2. Create user account\n3. Grant dashboard access\n4. Start onboarding email sequence');
+                
+                // Simulate dashboard access
+                setTimeout(() => {
+                    alert('✅ Trial started! Redirecting to dashboard...');
+                    window.location.href = 'dashboard_demo.html';
+                }, 1000);
+            }
+        }
+        
+        // Rate check demo
+        function checkRate() {
+            const lane = document.getElementById('laneInput').value || 'Chicago to Dallas';
+            const resultDiv = document.getElementById('testResult');
+            const contentDiv = document.getElementById('resultContent');
+            
+            const sampleData = {
+                'Chicago to Dallas': {
+                    currentRate: '$1,850',
+                    optimizedRate: '$2,150',
+                    marginIncrease: '16.2%',
+                    confidence: '92%',
+                    dataPoints: '47 competitors analyzed',
+                    recommendation: 'Increase rate by $300. Market can bear $2,150 based on recent wins.'
+                },
+                'LA to NYC': {
+                    currentRate: '$3,200',
+                    optimizedRate: '$3,750',
+                    marginIncrease: '17.2%',
+                    confidence: '88%',
+                    dataPoints: '52 competitors analyzed',
+                    recommendation: 'Increase by $550. Fuel surcharge increase expected next week.'
+                },
+                'Miami to Atlanta': {
+                    currentRate: '$1,100',
+                    optimizedRate: '$1,350',
+                    marginIncrease: '22.7%',
+                    confidence: '95%',
+                    dataPoints: '38 competitors analyzed',
+                    recommendation: 'Increase by $250. Limited capacity on this lane.'
+                }
+            };
+            
+            const data = sampleData[lane] || sampleData['Chicago to Dallas'];
+            
+            contentDiv.innerHTML = `
+                <h4>Lane: ${lane}</h4>
+                <pre>Current Market Rate: ${data.currentRate}
+Optimized Rate: ${data.optimizedRate} (+${data.marginIncrease})
+Confidence Score: ${data.confidence}
+Data Points: ${data.dataPoints}
+
+Recommendation: ${data.recommendation}</pre>
+                <p style="margin-top: 15px; color: #065f46; font-weight: 600;">
+                    💡 This analysis would save $${parseInt(data.optimizedRate.replace('$', '').replace(',', '')) - parseInt(data.currentRate.replace('$', '').replace(',', ''))} on this shipment.
+                </p>
+            `;
+            
+            resultDiv.style.display = 'block';
+        }
+        
+        // Sample data analysis
+        function analyzeSample() {
+            const resultDiv = document.getElementById('testResult');
+            const contentDiv = document.getElementById('resultContent');
+            
+            contentDiv.innerHTML = `
+                <h4>Sample Data Analysis Results</h4>
+                <pre>ANALYSIS COMPLETE
+================
+
+Dataset: 1,247 historical shipments (12 months)
+Total Revenue Analyzed: $4.2M
+
+KEY FINDINGS:
+1. 23% under-pricing on 312 shipments ($287,000 lost revenue)
+2. 47% of lanes have competitor rate data available
+3. Top 3 optimization opportunities:
+   - Chicago-Dallas: +$300/shipment (28% increase)
+   - LA-NYC: +$550/shipment (17% increase)  
+   - Miami-Atlanta: +$250/shipment (23% increase)
+
+ESTIMATED MONTHLY IMPACT:
+• Additional Revenue: $47,800
+• Implementation Cost: $197
+• ROI: 242x
+
+RECOMMENDED ACTIONS:
+1. Adjust rates on 47 high-opportunity lanes
+2. Implement competitor monitoring on 12 key routes
+3. Review pricing weekly instead of monthly</pre>
+                <p style="margin-top: 15px; color: #065f46; font-weight: 600;">
+                    📊 Full analysis available in dashboard. This sample shows 1.1% of total data.
+                </p>
+            `;
+            
+            resultDiv.style.display = 'block';
+        }
+        
+        // Initialize with sample
+        window.onload = function() {
+            document.getElementById('laneInput').value = 'Chicago to Dallas';
+        }
+    </script>
+</body>
+</html>
